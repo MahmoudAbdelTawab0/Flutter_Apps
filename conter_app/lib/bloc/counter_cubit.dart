@@ -22,7 +22,7 @@ void InecrementOne(){
 }
 
   void InecrementTen(){
-    value+=2;
+    value--;
 
     emit(CounterChnage());
   }

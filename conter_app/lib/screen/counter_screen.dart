@@ -12,7 +12,7 @@ class CounterScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
 
-        title: Text("Score Counter",
+        title: Text("Counter App",
           style: TextStyle(color: Colors.black),
         ),
       ),
@@ -24,13 +24,8 @@ class CounterScreen extends StatelessWidget {
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text("TEAM A",
-                    style: TextStyle(fontSize: 60,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.black,
-                    ),
-                  ),
-                  SizedBox(height: 30,),
+
+                  //SizedBox(height: 30,),
                   BlocBuilder<CounterCubit, CounterState>(
                     builder: (context, state) {
                       return Text(context
@@ -54,7 +49,7 @@ class CounterScreen extends StatelessWidget {
                               MediaQuery.of(context).size.width, // width
                               57 // height
                           )),
-                      child: Text("+1 POINT",
+                      child: Text("Inecrement",
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w600,
@@ -72,7 +67,7 @@ class CounterScreen extends StatelessWidget {
                               MediaQuery.of(context).size.width, // width
                               57 // height
                           )),
-                      child: Text("+2 POINT",
+                      child: Text("Denecrement",
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w600,
@@ -80,24 +75,6 @@ class CounterScreen extends StatelessWidget {
                         ),
                       )),
                   SizedBox(height: 15,),
-                  ElevatedButton(onPressed: () {
-                    context.read<CounterCubit>().DenecrementTen();
-                  },
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.blue,
-                          fixedSize: Size(
-                              MediaQuery.of(context).size.width, // width
-                              57 // height
-                          )),
-                      child: Text("+3 POINT",
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.w600,
-                          color: Colors.white,
-                        ),
-                      )),
-                  SizedBox(height: 15,),
-
                   ElevatedButton(onPressed: () {
                     context.read<CounterCubit>().Zero();
                   },

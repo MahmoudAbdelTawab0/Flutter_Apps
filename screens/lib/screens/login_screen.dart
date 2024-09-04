@@ -55,6 +55,7 @@ class Login extends StatelessWidget {
                 decoration: const InputDecoration(
                   hintText: 'Your Email',
                   prefixIcon: Icon(Icons.email_outlined),
+                  suffixIcon: Icon(Icons.check),
                   border: OutlineInputBorder(),
                 ),
               ), // email
@@ -67,6 +68,7 @@ class Login extends StatelessWidget {
                 decoration: const InputDecoration(
                   hintText: 'Password',
                   prefixIcon: Icon(Icons.lock_outlined),
+                  suffixIcon: Icon(Icons.visibility_off),
                   border: OutlineInputBorder(),
                 ),
               ), // password
